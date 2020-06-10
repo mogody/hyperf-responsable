@@ -1,5 +1,5 @@
 {
-    "name": "mogody/hyperf-api-resource",
+    "name": "mogody/hyperf-responsable",
     "description": "Responsable Interface for Responses",
     "type": "library",
     "license": "MIT",
