@@ -1,0 +1,46 @@
+{
+    "name": "mogody/hyperf-api-resource",
+    "description": "Responsable Interface for Responses",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.2",
+        "hyperf/http-server": "~1.1.0",
+        "psr/http-message": "^1.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.0.0",
+        "hyperf/testing": "~1.1.0",
+        "hyperf/di": "~1.1.0",
+        "phpstan/phpstan": "^0.10.5",
+        "friendsofphp/php-cs-fixer": "^2.9"
+    },
+    "authors": [
+        {
+            "name": "wenghang",
+            "email": "wenghang1228@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mogody\\Responsable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MogodyTest\\Responsable\\": "tests"
+        }
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Mogody\\Responsable\\ConfigProvider"
+        }
+    },
+    "scripts": {
+        "test": "co-phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    }
+}
